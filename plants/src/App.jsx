@@ -8,6 +8,10 @@ import Products from './pages/Products'
 import Userinfo from './pages/Userinfo';
 import Reg from './pages/Reg';
 import Green from './pages/Green';
+import About from './pages/About';
+import Product from './components/Products/Product';
+import Pd from './components/Products/Pd';
+
 
 const App = () => {
   return (
@@ -22,6 +26,9 @@ const App = () => {
     <Route path='/Userinfo' element={<Userinfo/>}/>
     <Route path='/Reg' element={<Reg/>}/>
     <Route path='/Green' element={<Green/>}/>
+    <Route path='/About' element={<About/>}/>
+    <Route path="/" element={<Product />} />
+        <Route path="/product/:id" element={<Pd />} />
     </Routes>
     </BrowserRouter>
     </>

@@ -20,7 +20,7 @@ const Signin = () => {
   return (
     <div>
         <form action="" onSubmit={handleSubmit}>
-            <div  className=' h-screen w-screen flex justify-center items-center rounded-bl-full rounded-tr-full  bg-quinary border border-quaternary'>
+            <div  className=' h-screen w-screen flex justify-center items-center bg-white'>
             <div className='   relative '>
              <div>
               <div className='space-y-4   relative  '>

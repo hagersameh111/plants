@@ -6,7 +6,10 @@ import Footer from "../components/Footer/Footer";
 const Green = () => {
   return (
     <div>
-      <Navbar />
+      <div >
+        <Navbar />
+      </div>
+      
       <div className="relative h-[700px] w-full">
         <video
           src={v2}
@@ -17,7 +20,7 @@ const Green = () => {
         ></video>
         <Greens />
       </div>
-      
+      <Footer/>
     </div>
   );
 };

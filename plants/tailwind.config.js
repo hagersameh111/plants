@@ -6,10 +6,10 @@ export default {
       extend: {
         colors: {
           primary: "#148E08",
-          secondary: '#3C3D37',
+          secondary:"#69814c",
           tertiary:"#FFD700 ",
-          quaternary:"#D7D3BF",
-          quinary:"#414A2B",
+          quaternary:"#606060",
+          
           
           dark: "#ffcf22",
         },

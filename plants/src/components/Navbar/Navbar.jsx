@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "../Navbar/Responsivemenu";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo3 from "../../assets/logo3.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -20,20 +20,22 @@ export const NavbarLinks = [
   
 ];
 // eslint-disable-next-line react/prop-types
-const Navbar = ({ handleOrderPopup }) => {
+const Navbar = ( ) => {
   const [showMenu, setShowMenu] = useState(true);
   const toggleMenu = () => setShowMenu((prev) => !prev);
 
   return (
     <>
-      <nav className="fixed top-0 right-0 w-full z-50 bg-blur backdrop-blur-sm text-quaternary shadow-md">
+      <nav className="fixed top-0 right-0 w-full z-50 bg-white text-black ">
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
            
-            <div className="flex justify-between">
+            <div className="flex justify-between place-items-center">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                <img src={logo} alt="Logo" className="h-18 w-20" />
+                <img src={logo3} alt="Logo" className="h-13 w-10" />
+
               </Link>
+              <h1 className="text-2xl font-extrabold">Eyes On Plants</h1>
             </div>
 
             {/* Desktop Menu */}
@@ -46,7 +48,7 @@ const Navbar = ({ handleOrderPopup }) => {
                       className={({ isActive }) =>
                         isActive 
                           ? "active" 
-                          : "text-quaternary-600 hover:text-tertiary"
+                          : "text-quaternary-600 hover:text-primary-800"
                       }
                       aria-label={link.name}
                     >
@@ -63,7 +65,7 @@ const Navbar = ({ handleOrderPopup }) => {
              <div className="hover:to-primary">
               <ul className="flex justify-between items-center gap-4">
               <li>
-              <button className="hover:text-tertiary transition duration-300"
+              <button className="hover:text-primary transition duration-300"
               >
                  <Link to="/Favourites" >
                    <FontAwesomeIcon icon={faHeart} />
@@ -73,7 +75,7 @@ const Navbar = ({ handleOrderPopup }) => {
                 </li>
              <li>
              <button
-                className="hover:text-tertiary transition duration-300"
+                className="hover:text-primary transition duration-300"
               >
                  <Link to="/Cart" >
                     <FontAwesomeIcon icon={faCartShopping} />
@@ -84,7 +86,7 @@ const Navbar = ({ handleOrderPopup }) => {
               </li>
              <li>
              <button
-                className="hover:text-tertiary transition duration-300"
+                className="hover:text-primary transition duration-300"
               >
                  <Link to="/Userinfo" >
                    <FontAwesomeIcon icon={faUser} />

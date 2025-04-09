@@ -21,7 +21,7 @@ import Fruites from './pages/Fruites';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/plants">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
